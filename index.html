@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Famous NYC Film Locations</title>
+    <style>
+        /* Always set the map height explicitly to define the size of the div element that contains the map */
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+        function initMap() {
+            var myLatLng = {lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE}; // Example: New York City
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: myLatLng
+            });
+
+            // Add a marker
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Hello World!'
+            });
+
+            // You can add more markers, info windows, drawing layers, etc. here.
+            // For example, adding another marker:
+            var marker2 = new google.maps.Marker({
+                position: {lat: YOUR_LATITUDE + 0.05, lng: YOUR_LONGITUDE + 0.05}, // A bit offset
+                map: map,
+                title: 'Another Spot!'
+            });
+        }
+    </script>
+    <!-- Async script executes immediately and doesn't block rendering of the page. -->
+    <!-- The load callback executes when the script has finished loading. -->
+    <!-- Replace YOUR_API_KEY with your actual API key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvVAjOlv4hCQeIehjc5hYg_1LBJQvpGp4&callback=initMap" async defer></script>
+</body>
+</html>
