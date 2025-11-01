@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;My Custom Google Map&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Always set the map height explicitly to define the size of the div element that contains the map */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>#map {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Optional: Makes the sample page fill the window. */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>html, body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="map"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function initMap() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var myLatLng = {lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE}; // Example: New York City</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>var map = new google.maps.Map(document.getElementById('map'), {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>zoom: 12,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>center: myLatLng</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Add a marker</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var marker = new google.maps.Marker({</p>
+<p class="p1"><span class="Apple-converted-space">                </span>position: myLatLng,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>map: map,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>title: 'Hello World!'</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// You can add more markers, info windows, drawing layers, etc. here.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// For example, adding another marker:</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var marker2 = new google.maps.Marker({</p>
+<p class="p1"><span class="Apple-converted-space">                </span>position: {lat: YOUR_LATITUDE + 0.05, lng: YOUR_LONGITUDE + 0.05}, // A bit offset</p>
+<p class="p1"><span class="Apple-converted-space">                </span>map: map,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>title: 'Another Spot!'</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Async script executes immediately and doesn't block rendering of the page. --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- The load callback executes when the script has finished loading. --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Replace YOUR_API_KEY with your actual API key --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvVAjOlv4hCQeIehjc5hYg_1LBJQvpGp4&amp;callback=initMap" async defer&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
